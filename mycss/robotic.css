@@ -1,0 +1,865 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;  /* list-style: none; */
+}
+
+:root {
+  --paragraph_color: #918e8e;
+  --bg_color: #272727;
+  --green: #92bf24;
+  --dark_green: #6f9412;
+}
+
+@font-face {
+  font-family: myfont;
+  src: url("../fonts/RobotoMono-VariableFont_wght.ttf");
+}
+
+body {
+  background-color: var(--bg_color);
+  position: relative;  /* overflow: auto; */
+}
+
+html {
+  font-family: myfont;
+  scroll-behavior: smooth;
+}
+
+span {
+  color: var(--green);
+}
+
+p {
+  color: var(--paragraph_color);
+  font-size: 1.2rem;
+}
+
+h1 {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 0.3;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+/* --------------------------------- */
+.my_btn {
+  width: 150px;
+  height: 35px;
+  border: none;
+  color: #fff;
+  border-radius: 0rem;
+  margin: 2rem 0 0;
+  background: var(--green);
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+/*------------- page_sep ----------- */
+.page_sep_area {
+  background: url(../images/templatemo_separateline.png) no-repeat;
+  background-position: right;
+  height: 40px;
+  font-size: 20px;
+  color: #282828;
+  line-height: 40px;
+  min-width: 140px;
+  font-weight: bold;
+  margin: 15px 55px 15px 0px;
+}
+
+.page_sep_area span {
+  float: right;
+  margin-right: 160px;
+  color: var(--paragraph_color);
+}
+
+/*------------- page_sep ends ----------- */
+
+/* ------------------------------------------------------------------------------*/
+
+/********** homepage image **********/
+
+#home_img, #home_img img {
+  width: 100%;
+}
+
+/********** cover image **********/
+#cover_img {
+  width: 100%;
+}
+
+#cover_img .bg_img {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  top: 0;
+}
+
+/* --------------------------------- navigation ------------------------- */
+nav {
+  width: 850px;
+  background-image: url("../images/templatemo_menubg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0rem 7rem;
+  z-index: 999;
+}
+
+#toggle_menu {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  background: none;
+  padding: 0.2rem 0.8rem 0 0.8rem;
+  float: right;
+  border: 2px solid #fff;
+  border-radius: 0.5rem;
+  transition: 1s;
+}
+
+#menu_itom li {
+  float: left;
+  margin-left: 0.2rem;
+  padding: 2rem 2rem 0;
+  height: 70px;
+  -webkit-transform: skew(45deg);
+  transform: skew(45deg);
+  transition: 0.3s;
+  list-style: none;
+}
+
+#menu_itom li a {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#menu_itom a {
+  display: block;
+  -webkit-transform: skew(-45deg);
+  transform: skew(-45deg);
+}
+
+#menu_itom .active, li:hover {
+  background-color: var(--dark_green);
+  cursor: pointer;
+}
+
+#menu_itom li:hover a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+#menu_itom .active a {
+  color: var(--green);
+}
+
+/* three social links */
+nav .social_link {
+  width: 400px;
+  margin-left: 600px;
+}
+
+nav .social_link .link {
+  transition: 0.5s;
+}
+
+nav .social_link .link:hover {
+  cursor: pointer;
+  transform: rotateX(-45deg);
+}
+
+/* ------------------------------- navigation ends------------------------------------- */
+
+/* ========================= custom_container starts from ==================================================*/
+
+.custom_container {
+  width: 100%;
+  position: absolute;
+  margin-top: -35%;
+  padding: 0 5rem;
+}
+
+/* ------------------ page_title  ----------------- */
+.custom_container .page_title {
+  text-align: center;
+  position: relative;
+  margin-left: -15%;
+  margin-top: -2%;
+}
+
+.custom_container .page_title h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  letter-spacing: -3px;
+  color: #bababa;
+  text-shadow: 2px 2px 0.5px #00000080;
+  margin-bottom: 0;
+}
+
+.custom_container .page_title h2 {
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: #a7a7a7;
+  text-shadow: 0.9px 0.9px 0.8px #2b2a2a;
+  margin-top: 2rem;
+}
+
+/* ---------- header_contents starts ---------------- */
+.custom_container .header_content {
+  text-align: right;
+  float: right;
+}
+
+.header_content h1 {
+  font-size: 5rem;
+  margin-top: 8rem;
+}
+
+.white_text {
+  color: #fff;
+}
+
+.header_content .my_btn:hover {
+  -webkit-border-left: 2px solid var(--green);
+  -webkit-border-bottom: 2px solid var(--green);
+  border-left: 2px solid var(--green);
+  border-bottom: 2px solid var(--green);
+  background: none;
+  color: #fff;
+}
+
+/* --------------custom_container ends here----------------------- */
+
+/* =========================#modal box================================= */
+
+#modal {
+  background-color: rgba(209, 209, 209, 0.877);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  display: none;
+}
+
+#close_btn {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  font-size: 2.5rem;
+  background-color: #000;
+  color: grey;
+  padding: 0.1rem 0.7rem 0.3rem;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+#close_btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  font-size: 3.5rem;
+  background-color: grey;
+  color: #000;
+}
+
+#prev, #next {
+  font-size: 3rem;
+  transition: 0.3s;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+#prev {
+  left: 11%;
+}
+
+#next {
+  right: 7%;
+}
+
+#prev:hover, #next:hover {
+  cursor: pointer;
+  color: var(--dark_green);
+}
+
+#modal .img_area {
+  width: 50%;
+  height: 75%;
+  border-radius: 1.5rem;
+  text-align: center;
+  overflow: hidden;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#modal .img_area img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ======================#modal box ends here======================== */
+
+/*--------------- templatemo_services starts from here ----------------*/
+
+#templatemo_services {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
+}
+
+#templatemo_services .my_btn {
+  height: 45px;
+  background: none;
+  border: 1px solid rgba(142, 179, 158, 0.632);
+}
+
+#templatemo_services img {
+  width: 100%;
+}
+
+.services_boxes {
+  text-align: center;
+}
+
+.services_boxes h2 {
+  margin: 0.5rem;
+}
+
+.services_boxes p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.img_box {
+  background-image: url("../images/service/1.jpg");
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  transition: 1s;
+  position: relative;
+  overflow: hidden;
+}
+
+.search_icon {
+  color: #fff;
+  font-size: 4rem;
+  position: absolute;
+  top: 43%;
+  left: 47%;
+  z-index: 1;
+  display: none;
+  transition: 2s;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: 1s;
+}
+
+/* hover effects in templatemo section */
+.img_box:hover .search_icon {
+  display: block;
+}
+
+.img_box:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#templatemo_services .my_btn:hover {
+  background-color: var(--green);
+  color: #fff;
+}
+
+/* ----------------------- */
+.second_img_box {
+  background-image: url("../images/service/3.jpg");  /* background-color: #92bf24; */
+}
+
+.third_img_box {
+  background-image: url("../images/service/2.jpg");  /* background-color: #92bf24; */
+}
+
+.templatemo_left .services_boxes {
+  margin: 12rem 2rem;
+}
+
+.templatemo_right {
+  padding: 0;
+}
+
+.templatemo_right .services_boxes {
+  margin: 5rem 2rem 0rem;
+}
+
+.templatemo_right .third_img_box {
+  margin: 13rem 0rem;
+  background-color: #92bf24;
+}
+
+#templatemo_services .img_box {
+  background-color: #92bf24;
+}
+
+/*-------------------------------- templatemo_services endshere ------------------------*/
+
+/* -----------------------packages_section section starts from here--------------------------- */
+
+#package {
+  text-align: center;
+  padding: 5% 0;
+}
+
+#package .packages_box {
+  padding: 0;
+  border-left: 3rem solid var(--bg_color);
+  border-right: 3rem solid var(--bg_color);
+  text-align: left;
+}
+
+.packages_box img {
+  width: 100%;
+}
+
+.package_inner {
+  background-color: #ffffff;
+}
+
+.package_inner span {
+  color: rgba(75, 113, 4, 0.734);
+  font-weight: 900;
+  font-size: 4rem;
+  margin-left: 2rem;
+}
+
+.package_inner i {
+  color: #fff;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+}
+
+.package_inner h3 {
+  margin-top: -65%;
+  margin-left: 7%;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.package_inner .list {
+  margin-top: 45%;
+  padding: 8% 7% 2%;
+  list-style: none;
+  background-color: #fff;
+}
+
+.package_inner .list li img {
+  width: 6%;
+  margin-top: -5%;
+}
+
+.package_inner .list li {
+  color: rgb(165, 165, 165);
+  padding: 3% 0;
+  border-bottom: 1px solid rgba(213, 212, 212, 0.626);
+}
+
+.packages_box .my_btn {
+  background-color: #9dd511;
+  color: rgba(75, 113, 4, 0.734);
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  margin-left: 15%;
+  width: 70%;
+  height: 45px;
+  font-weight: 600;
+  font-size: 2rem;
+  transition: 0.3s;
+}
+
+.packages_box .my_btn:hover {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/*--------------------- PACKAGES section ends here ------------------------------*/
+
+/* -------------------- About section starts from here ----------------------------------------- */
+
+#about_section {
+  padding: 4% 0;
+}
+
+#about_section img {
+  width: 100%;
+}
+
+#about_section h1 {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+#about_section h2 {
+  font-size: 2rem;
+}
+
+#about_section ul {
+  color: var(--paragraph_color);
+  margin-left: 3rem;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+#about_section p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+/*------------------------------  about section ends here ------------------------*/
+
+/*------------------------------- contact section starts from  here ---------------------------- */
+
+#contact_section {
+  margin-top: 5rem;
+  background-color: turquoise;
+}
+
+#contact_section .form_input {
+  background-color: transparent;
+  margin-bottom: 1.2rem;
+  border: none;
+  border: 0.2px solid #656565;
+}
+
+#contact_section .my_btn {
+  width: 70px;
+  color: var(--bg_color);
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+#contact_section .map_area img {
+  z-index: 9;
+  position: absolute;
+}
+
+#contact_section .map {
+  z-index: -1;
+  opacity: 0.7;  /* margin-top: -13%; */
+}
+
+/* -------------------------footer --------------------------*/
+.footer {
+  background-color: #000;
+  margin-top: 2rem;
+  padding: 2rem 7rem;
+}
+
+.footer p {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.footer span {
+  color: #fff;
+}
+
+/*------------------------------ contact section ends here --------------------- */
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/*================================== Responsive ============================== */
+@media (max-width:1000px) {
+  nav {
+    width: 640px;
+  }
+
+  ul li a {
+    font-size: 1rem;
+  }
+
+  nav .social_link {
+    display: none;
+  }
+
+  .custom_container .page_title h1 {
+    font-size: 5rem;
+  }
+
+  .custom_container .header_content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    margin-top: 5rem;
+  }
+
+  .custom_container .header_content h2 {
+    font-size: 1.5rem;
+  }
+
+  .custom_container .header_content p {
+    font-size: 0.9rem;
+  }
+
+  .custom_container .header_content .btn {
+    width: 150px;
+    height: 30px;
+    margin-top: 1rem;
+  }
+
+}
+
+/* ----------------------------------------- */
+@media (max-width:768px) {
+
+  /* navigation */
+  nav {
+    width: 70%;
+    padding: 3.5%;
+  }
+
+  #toggle_menu {
+    display: block;
+  }
+
+  #menu_itom {
+    display: none;
+    background-color: rgba(91, 147, 7, 0.707);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 95%;
+    -webkit-animation: mymove 0.7s forwards; 
+    animation: mymove 0.7s forwards;
+  }
+
+  @keyframes mymove {
+    0% {
+      top: 0%;
+      opacity: 0;
+    }
+
+    100% {
+      top: 100%;
+      opacity: 1;
+    }
+
+  }
+
+  #menu_itom li {
+    float: none;
+    padding: 1rem 1rem 0;
+    height: 40px;
+    transform: skew(0);
+    border-bottom: 2px solid rgb(19, 243, 19);
+  }
+
+  #menu_itom li a {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+
+  /* .custom_container */
+  .custom_container .page_title {
+    padding-left: 12%;
+    text-align: left;
+  }
+
+  .custom_container .page_title h1 {
+    font-size: 3.5rem;
+  }
+
+  .custom_container .page_title span {
+    color: grey;
+  }
+
+  .custom_container .page_title h2 {
+    font-size: 2rem;
+  }
+
+  #cover_img {
+    display: none;
+  }
+
+  .custom_container .header_content {
+    float: none;
+    text-align: left;
+    margin-top: 40%;
+    padding: 0;
+  }
+
+  .custom_container .header_content h1 {
+    font-size: 4rem;
+  }
+
+  .custom_container .header_content h2 {
+    font-size: 1.7rem;
+    font-weight: 300;
+  }
+
+  .custom_container .header_content p {
+    font-size: 1.3rem;
+    color: var(--paragraph_color);
+  }
+
+  .my_btn {
+    float: right;
+  }
+
+  .page_sep_area_home_section {
+    margin-top: 30rem;
+  }
+
+  /* -----------services------------ */
+  .templatemo_left .services_boxes {
+    margin: 2rem 2rem 10rem;
+  }
+
+  #templatemo_services .services_boxes .my_btn {
+    margin-right: 35%;
+  }
+
+  .templatemo_right .third_img_box {
+    margin: 10rem 0rem 2rem;
+  }
+
+  /* ----------package--------------- */
+  #package {
+    width: 90%;
+  }
+
+  /*------------- modal--------- */
+  #modal .img_area {
+    width: 70%;
+    height: 60%;
+  }
+
+}
+
+/* --------------------------------------------------- */
+@media (max-width:620px) {
+  .custom_container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .custom_container .page_title {
+    margin-top: 42%;
+  }
+
+  .custom_container .page_title h1 {
+    font-size: 4.5rem;
+    text-shadow: 1px 3px 1px #767575;
+  }
+
+  .custom_container .page_title span {
+    color: var(--green);
+  }
+
+  .custom_container .page_title h2 {
+    font-size: 2rem;
+  }
+
+  .custom_container .header_content {
+    margin-top: 65%;
+  }
+
+  .custom_container .header_content h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
+  .custom_container .header_content h2 {
+    font-size: 1.9rem;
+    font-weight: 700;
+  }
+
+  .custom_container .header_content p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--paragraph_color);
+  }
+
+  .page_sep_area_home_section {
+    margin-top: 50rem;
+  }
+
+  #templatemo_services .services_boxes .my_btn {
+    margin-right: 25%;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+}
+
+/* ------------------------------------------------ */
+@media (max-width:530px) {
+  html {
+    font-size: 0.5rem;
+  }
+
+  .page_sep_area {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+
+  /* modal */
+  #modal .img_area {
+    width: 80%;
+    height: auto;
+  }
+
+  #prev {
+    left: 14%;
+    color: #fff;
+  }
+
+  #next {
+    right: 10%;
+    color: #fff;
+  }
+
+}
+
+/* ------------------------------------------------ */
+@media (max-width:420px) {
+  .custom_container .page_title {
+    margin-top: 45%;
+  }
+
+  .custom_container .header_content {
+    margin-top: 70%;
+  }
+
+  .custom_container .header_content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--paragraph_color);
+  }
+
+}
